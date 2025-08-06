@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Maastricht University Master Thesis 
+% LaTeX Template
+% Version 1.0 (2025/08/06)
+%
+% This version is the unofficial binding version created by me for my master thesis.
+%
+% Original author:
+% Shakira Agata
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{upquote}
+\usepackage{graphicx}
+\usepackage{bm} 
+\usepackage{changepage}
+\author{Example author}
+\usepackage{hyperref}
+\usepackage{multirow} 
+
+\usepackage{array} 
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}} 
+\usepackage{array}
+\usepackage{relsize}
+\usepackage{svg}
+\usepackage{listings}
+\lstset{
+  breaklines=true,
+  breakatwhitespace=true,
+  columns=flexible
+}
+\usepackage{setspace}
+\usepackage{xltabular,ragged2e}
+\usepackage{datatool}
+\usepackage{colortbl}
+\usepackage[acronym,nonumberlist]{glossaries}
+\usepackage{acronym}
+\usepackage{xr}
+\usepackage[export]{adjustbox} 
+
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{caption}
+\usepackage[
+backend=biber,
+style=vancouver,
+sorting=none
+]{biblatex}
+
+\addbibresource{Mendeleyreferences.bib}
+
+\title{Bibliography management: \texttt{biblatex} package}
+\setstretch{1.5}
+\usepackage{geometry}
+\geometry{a4paper, portrait, margin=25mm}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{phv}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+\thispagestyle{empty}
+
+
+\sffamily
+\LARGE{Maastricht University}\\[-0.9ex]
+\LARGE{Faculty of Health, Medicine and Life Sciences}\\[2ex]
+\large{Department of Translational Genomics}\\
+\vspace{0.4cm}
+
+\includegraphics[width=6cm]{Image frontpage/um_logo_maastricht_university_logo_universiteit_maastricht_logo_copy.png}\\
+\vspace{0.6cm}
+
+\textbf{\LARGE{Master Thesis LaTEX template}}
+\medskip\par
+\textbf{\normalsize{submitted for the degree of Biomedical Sciences}} \\[2ex]
+\textbf{\Large{MSc Biomedical Sciences}}\\
+\vspace{0.6cm}
+
+\Large{\textbf{Example title of thesis}}\\[-2.0ex]
+
+\bigskip\par
+by \par
+\large{firstname lastname, BSc-X }\\[-1ex]
+\large{Student number: X}\\ [-1.5ex]
+
+\vspace{0.6cm}
+\end{center}
+\vfill
+\medskip
+\vfill
+\begin{tabular}{ll}
+\sffamily
+  Internship Period: X to X \\
+\sffamily
+  Submission Date: X \\[-1ex]
+\sffamily
+  UM supervisor: \ac{EG} \\
+\end{tabular}
+\vfill
+
+\newpage
+\section*{Abstract}
+\noindent
+The abstract must fit in one page and should include the background, methodology, results and conclusions of your study.
+
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+\title{Acronym List}
+
+\date{}
+\maketitle
+\thispagestyle{empty}
+\input{acro_list}
+
+\newpage
+\setcounter{page}{1}
+\section{How to use this template}
+This is a practical guide for how to use this template. The template includes the following standard sections: table of content, acronym list, introduction, materials and methods, results, discussion and conclusion, impact, references and supplementary information. Based on the design of the template, the content can be easily adapted while retaining the structure of the template. The template has three main folders detailed here:
+\begin{itemize}
+\item \textbf{Image frontpage:} This include the logo seen on the frontpage.
+
+\item \textbf{Images:} This includes the images/figures present in the introduction, method and results. This allows for organization and correct numbering of figures in text. In order to add an image, you can follow these steps available at: \href{https://www.overleaf.com/learn/latex/Inserting_Images}{How to add images in Overleaf}.
+
+\item \textbf{Supplementary information: }This includes documents that can be shown in the supplementary including images, PDF documents or code sections.
+\end{itemize}
+
+The template also includes three individual files:
+\begin{itemize}
+\item \textbf{acro\textunderscore list.tex:} This includes the acronym list using the acronym package which supports auto-expansion on first mention, and shortening on subsequent mentions.
+
+\item \textbf{LaTEX template-Master Thesis.tex:} This includes the main text of the document which is the predominant working place. This is the main file that needs to be compiled to build the document. To compile this document, you have to select it and click on 'Recompile'.
+
+\item \textbf{Mendeleyreferences.bib}: This includes the bibliography file for your references. For your bibliography, it is advised to use Mendeley as it allows for automatic numbering and organization of references which is useful for longitudinal projects. To upload your Mendeley references to Overleaf, follow the steps available at: \href{https://www.overleaf.com/learn/how-to/How_to_link_Mendeley_to_your_Overleaf_account}{How to link Mendeley to your Overleaf account}
+\end{itemize}
+
+\newpage
+\section{Introduction}{\vspace{0.1cm}}
+
+
+\newpage
+\section{Materials and Methods}
+
+
+\newpage
+\section{Results}
+\newpage
+\section{Discussion and conclusions}
+\subsection{Overview of results}
+
+\subsection{Critical synthesis of results}
+
+\subsection{Limitations}
+
+
+\subsection{Conclusion}
+
+\newpage
+\section{Impact/valorization}
+
+
+\newpage
+\begin{adjustwidth}{1.5mm}{1.5mm}
+\section{References}
+\sloppy
+To print your bibliography list in this section, use \textbackslash printbibliography[heading=none].
+
+\end{adjustwidth}
+\newpage
+
+
+
+\section{Supplementary information}
+\newpage
+\setcounter{equation}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\makeatletter
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thesubsection}{S\arabic{subsection}}
+\renewcommand{\thepage}{\arabic{page}}
+
+\subsection{Supplementary Materials and Methods}
+\label{sec:Supplementary Materials and Methods}
+
+\newpage
+\subsection{Supplemental data}
+\label{sec:Supplementary data}
+
+\end{document}
